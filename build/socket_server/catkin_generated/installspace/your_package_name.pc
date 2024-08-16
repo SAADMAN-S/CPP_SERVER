@@ -1,0 +1,8 @@
+prefix=/home/saadman/Socket_Programming/install
+
+Name: your_package_name
+Description: Description of your_package_name
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lyour_package_name
+Requires: roscpp std_msgs

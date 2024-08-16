@@ -1,0 +1,2 @@
+pressure_publisher:socket_server
+-DCATKIN_DEVEL_PREFIX=/home/saadman/Socket_Programming/devel -DCMAKE_INSTALL_PREFIX=/home/saadman/Socket_Programming/install -G Unix Makefiles

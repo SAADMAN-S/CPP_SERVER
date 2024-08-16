@@ -1,0 +1,47 @@
+/*
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
+    */
+    {
+        "configurations": [
+            {
+                "name": "Linux",
+                "includePath": [
+                    "${workspaceFolder}/**",
+                    "/opt/ros/noetic/include/**",
+                    "/usr/include/**",
+                    "${workspaceFolder}/devel/include/**"
+                ],
+                "defines": [],
+                "compilerPath": "/usr/bin/gcc",
+                "cStandard": "c11",
+                "cppStandard": "c++17",
+                "intelliSenseMode": "linux-gcc-x64",
+                "browse": {
+                    "path": [
+                        "/opt/ros/noetic/include",
+                        "/usr/include",
+                        "${workspaceFolder}/devel/include"
+                    ],
+                    "limitSymbolsToIncludedHeaders": true,
+                    "databaseFilename": ""
+                }
+            }
+        ],
+        "version": 4
+    }
+    
