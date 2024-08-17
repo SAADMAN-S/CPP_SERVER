@@ -29,6 +29,11 @@ const Homepage = () => {
           <button>Motor</button>
   
           </Link>
+          <Link to="/videostream">
+          <button>Video Stream</button>
+  
+          </Link>
+
         </div>
         </div>
     )

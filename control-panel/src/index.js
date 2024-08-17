@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { WebSocketProvider } from './Context/WebSocketContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
    <BrowserRouter>
+      <WebSocketProvider>
       <App />
+    </WebSocketProvider>
     </BrowserRouter>
  
 );
