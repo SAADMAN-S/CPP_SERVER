@@ -492,19 +492,6 @@ rosgraph_msgs_generate_messages_py/fast:
 	$(MAKE) -f pressure_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pressure_publisher/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
-#=============================================================================
-# Target rules for targets named sensor_publisher
-
-# Build rule for target.
-sensor_publisher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_publisher
-.PHONY : sensor_publisher
-
-# fast build rule for target.
-sensor_publisher/fast:
-	$(MAKE) -f socket_server/CMakeFiles/sensor_publisher.dir/build.make socket_server/CMakeFiles/sensor_publisher.dir/build
-.PHONY : sensor_publisher/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -543,7 +530,6 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... sensor_publisher"
 .PHONY : help
 
 

@@ -174,6 +174,14 @@ int main(int argc, char **argv) {
         "Access-Control-Allow-Headers: Content-Type\r\n"
         "\r\n";
 
+    // Sample HTTP response to redirect to the video stream
+    const char *video_redirect_template = 
+    "HTTP/1.1 302 Found\r\n"
+    "Location: http://192.168.0.109:8081/stream?topic=/usb_cam/image_raw\r\n"
+    "Content-Length: 0\r\n"
+    "\r\n";
+
+
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
         std::cerr << "Socket failed" << std::endl;
@@ -219,6 +227,20 @@ int main(int argc, char **argv) {
             close(new_socket);
             continue; // Wait for another connection
         }
+        
+        if (strncmp(buffer, "GET /video", 10) == 0 || strncmp(buffer, "HEAD /video", 11) == 0) {
+    // If the request is for /video, redirect to the webcam stream
+            const char *video_redirect_template = 
+            "HTTP/1.1 302 Found\r\n"
+            "Location: http://192.168.0.109:8081/stream?topic=/usb_cam/image_raw\r\n"
+            "Content-Length: 0\r\n"
+            "\r\n";
+
+            send(new_socket, video_redirect_template, strlen(video_redirect_template), 0);
+            close(new_socket);
+            continue; // Wait for another connection
+        }
+
 
         // Process POST request for direction commands
         if (strncmp(buffer, "POST", 4) == 0) {

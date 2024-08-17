@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = r'/home/saadman/CPP_SERVER/devel;/home/saadman/catkin_ws/devel;/opt/ros/noetic'.split(';')
+            CMAKE_PREFIX_PATH = r'/home/saadman/Socket_Programming/devel;/home/saadman/CPP_SERVER/devel;/home/saadman/catkin_ws/devel;/opt/ros/noetic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

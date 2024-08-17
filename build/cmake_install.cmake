@@ -132,7 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/saadman/Socket_Programming/build/gtest/cmake_install.cmake")
   include("/home/saadman/Socket_Programming/build/pressure_publisher/cmake_install.cmake")
-  include("/home/saadman/Socket_Programming/build/socket_server/cmake_install.cmake")
+  include("/home/saadman/Socket_Programming/build/my_camera_package/cmake_install.cmake")
 
 endif()
 
