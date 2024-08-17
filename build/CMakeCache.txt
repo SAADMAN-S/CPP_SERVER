@@ -447,10 +447,16 @@ gtest_hide_internal_symbols:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/noetic/lib/libusb_cam.so
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
+
+//Value Computed by CMake
+my_camera_package_BINARY_DIR:STATIC=/home/saadman/Socket_Programming/build/my_camera_package
+
+//Value Computed by CMake
+my_camera_package_SOURCE_DIR:STATIC=/home/saadman/Socket_Programming/src/my_camera_package
 
 //Value Computed by CMake
 pressure_publisher_BINARY_DIR:STATIC=/home/saadman/Socket_Programming/build/pressure_publisher
@@ -478,6 +484,12 @@ rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for usb_cam.
+usb_cam_DIR:PATH=/opt/ros/noetic/share/usb_cam/cmake
+
+//The directory containing a CMake configuration file for web_video_server.
+web_video_server_DIR:PATH=/opt/ros/noetic/share/web_video_server/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
